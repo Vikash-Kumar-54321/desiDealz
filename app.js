@@ -85,17 +85,10 @@ app.use(async (req, res, next) => {
     next();
 });
 
-app.get("/demouser", async (req, res) => {
-    let fakeUser = new User({
-        email: "vikash@gmail.com",
-        username: "Vikash"
-    });
-    let registeredUser = await User.register(fakeUser, "helloworld");
-    res.send(registeredUser);
-});
-
-
-
+app.get('/', (req, res) => {
+    res.redirect(301, '/product');
+  });
+ 
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
