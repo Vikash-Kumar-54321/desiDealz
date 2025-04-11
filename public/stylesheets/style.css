@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    flex: 1;
+}
+.rotate-180{
+    transform: rotate(180deg);
+    display: inline-block;
+}
+.f-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info{
+    background-color: #2222;
+}
+.f-image, .f-social, .f-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .2rem;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+.f-image{
+    gap: .4rem;  
+    font-size: larger;
+}
+.f-image a:hover{
+    scale: 1.2;
+}
+.f-image a{
+    text-decoration: none;
+}
+.f-links{
+    gap: 1rem;
+}
+.f-links a{
+    text-decoration: none;
+}
+.hover:hover{
+    scale: 1.2;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem !important; 
+}
+.listing-card{
+    border:none !important; 
+    margin-bottom: 3rem;
+}
+.card-body{
+    padding: 0px !important;
+}
+.link{
+    text-decoration: none !important;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+.size{
+    height: 40vh;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+}
+#map{
+    height: 500px;
+}
+.category-bar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .category-bar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .category-item {
+    min-width: 100px;
+    flex: 0 0 auto;
+  }
+  
+  .category-item img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .category-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  .category-item h3 {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  .category-item h3:hover {
+    color: rgb(97, 97, 171);
+    font-weight: 500;
+    transform: scale(1.1);
+  }
+
+  
+  #scrollLeft {
+    left: 0;
+  }
+  
+  #scrollRight {
+    right: 0;
+  }
+  
+  .scroll-btn {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 rgba(0,0,0,0.2);
+  }
+  

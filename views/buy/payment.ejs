@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") -%>
+<body>
+  <h2>Pay  &#8377; <%= price.toLocaleString("en-IN") %> with Razorpay</h2>
+  <button class="btn btn-outline-success" id="rzp-button">Pay Now</button>
+  <script src="https://checkout.razorpay.com/v1/checkout.js">
+  </script>
+  <script>
+    
+    document.getElementById("rzp-button").onclick = function () {
+      const options = {
+        key: "<%= key_id %>", 
+        amount: "<%=price*100%>", 
+        currency: "INR",
+        name: "Test Store",
+        description: "Frontend Only Test",
+        handler: async function (response) {
+            alert("Payment successful!");
+          
+            const verifyRes = await fetch("/payment/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(response),
+            });
+          
+            const verifyData = await verifyRes.json();
+            console.log("Verification result:", verifyData);
+          },
+          
+        prefill: {
+          name: "Vikash Kumar",
+          email: "vikash@test.com",
+          contact: "9999999999"
+        },
+        theme: {
+          color: "#F37254"
+        }
+      };
+
+      const rzp1 = new Razorpay(options);
+      rzp1.open();
+    };
+  </script>
+</body>
+
