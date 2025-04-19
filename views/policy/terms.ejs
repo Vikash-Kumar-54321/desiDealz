@@ -1,31 +1,200 @@
 <% layout("/layouts/boilerplate") -%>
-<div class="container mx-auto p-6">
-  <h1 class="text-3xl font-bold mb-4">Terms & Conditions – DesiDealz</h1>
+<link rel="stylesheet" href="/stylesheets/term.css">
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+  <!-- Header Section -->
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold text-indigo-700 mb-3">Terms & Conditions</h1>
+    <div class="w-20 h-1 bg-orange-500 mx-auto mb-4"></div>
+    <p class="text-lg text-gray-600">Last Updated: <span class="font-medium"><%= new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) %></span></p>
+  </div>
 
-  <h2 class="text-xl font-semibold mb-2">1. Introduction</h2>
-  <p class="mb-4">Welcome to DesiDealz! By using our website, you agree to be bound by the following terms and conditions.</p>
+  <!-- Intro Section -->
+  <div class="bg-indigo-50 rounded-lg p-6 mb-8 border-l-4 border-indigo-500">
+    <h2 class="text-2xl font-semibold text-indigo-800 mb-3">Welcome to DesiDealz</h2>
+    <p class="text-gray-700">These Terms & Conditions govern your use of our website and services. By accessing DesiDealz, you agree to comply with all provisions outlined below.</p>
+  </div>
 
-  <h2 class="text-xl font-semibold mb-2">2. Account Registration</h2>
-  <p class="mb-4">You must be 18+ to register. You are responsible for maintaining the confidentiality of your account credentials.</p>
+  <!-- Terms Sections -->
+  <div class="space-y-8">
+    <!-- Section 1 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">1</span>
+        <h2 class="section-title">Introduction</h2>
+      </div>
+      <div class="section-content">
+        <p>DesiDealz provides an online platform for purchasing authentic Indian products. By using our services, you acknowledge that you have read, understood, and agreed to these terms.</p>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">3. Product Information</h2>
-  <p class="mb-4">We make every effort to ensure product details are accurate. However, minor variations may occur due to photography or screen resolution.</p>
+    <!-- Section 2 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">2</span>
+        <h2 class="section-title">Account Registration</h2>
+      </div>
+      <div class="section-content">
+        <div class="notice-box">
+          <svg style="height: 25px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+          </svg>
+          <p>You must be at least 18 years old to create an account</p>
+        </div>
+        <ul class="custom-list">
+          <li>Provide accurate and complete registration information</li>
+          <li>Maintain the confidentiality of your login credentials</li>
+          <li>Immediately notify us of any unauthorized account use</li>
+          <li>You are responsible for all activities under your account</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">4. Orders & Payments</h2>
-  <p class="mb-4">Orders are confirmed once payment is successful. DesiDealz reserves the right to cancel orders in case of fraud, incorrect pricing, or stock issues.</p>
+    <!-- Section 3 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">3</span>
+        <h2 class="section-title">Product Information</h2>
+      </div>
+      <div class="section-content">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="info-card">
+            <div class="info-icon">🖼️</div>
+            <h3 class="info-title">Product Images</h3>
+            <p class="info-desc">Colors may vary slightly due to screen settings</p>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📝</div>
+            <h3 class="info-title">Descriptions</h3>
+            <p class="info-desc">We strive for accuracy but errors may occur</p>
+          </div>
+        </div>
+        <p class="mt-4">We reserve the right to correct any errors in product information without prior notice.</p>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">5. User Conduct</h2>
-  <p class="mb-4">You agree not to misuse the website, post harmful content, or violate any laws while using our services.</p>
+    <!-- Section 4 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">4</span>
+        <h2 class="section-title">Orders & Payments</h2>
+      </div>
+      <div class="section-content">
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">Order placement</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">Payment processing</div>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">Order confirmation</div>
+          </div>
+        </div>
+        <ul class="custom-list mt-4">
+          <li>We accept all major credit/debit cards and digital wallets</li>
+          <li>Orders are confirmed only after successful payment</li>
+          <li>We may cancel orders due to pricing errors or stock issues</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">6. Intellectual Property</h2>
-  <p class="mb-4">All content on DesiDealz including logos, text, and images are our property or licensed to us. Unauthorized use is prohibited.</p>
+    <!-- Section 5 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">5</span>
+        <h2 class="section-title">User Conduct</h2>
+      </div>
+      <div class="section-content">
+        <div class="prohibited-items">
+          <span class="prohibited-tag">No Fraud</span>
+          <span class="prohibited-tag">No Spam</span>
+          <span class="prohibited-tag">No Harassment</span>
+          <span class="prohibited-tag">No Illegal Content</span>
+        </div>
+        <p class="mt-4">Violations may result in account termination and legal action. You agree to use DesiDealz only for lawful purposes.</p>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">7. Limitation of Liability</h2>
-  <p class="mb-4">DesiDealz is not liable for indirect or consequential damages resulting from the use of our site or services.</p>
+    <!-- Section 6 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">6</span>
+        <h2 class="section-title">Intellectual Property</h2>
+      </div>
+      <div class="section-content">
+        <div class="ip-badge">
+          <svg style="height: 25px;" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>All Rights Reserved</span>
+        </div>
+        <p class="mt-3">All content including logos, graphics, and text are property of DesiDealz or our licensors. Unauthorized use, reproduction, or distribution is strictly prohibited.</p>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">8. Governing Law</h2>
-  <p class="mb-4">These terms shall be governed by Indian law. Any disputes will be handled by the courts of India.</p>
+    <!-- Section 7 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">7</span>
+        <h2 class="section-title">Limitation of Liability</h2>
+      </div>
+      <div class="section-content">
+        <p>DesiDealz shall not be liable for:</p>
+        <ul class="custom-list">
+          <li>Indirect, incidental, or consequential damages</li>
+          <li>Errors or omissions in content</li>
+          <li>Product availability or delivery delays</li>
+          <li>Unauthorized access to user data</li>
+        </ul>
+      </div>
+    </div>
 
-  <h2 class="text-xl font-semibold mb-2">9. Contact</h2>
-  <p class="mb-4">For any questions, contact us at support@desidealz.com</p>
+    <!-- Section 8 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">8</span>
+        <h2 class="section-title">Governing Law</h2>
+      </div>
+      <div class="section-content">
+        <div class="law-card">
+          <div class="flag-icon">🇮🇳</div>
+          <div>
+            <h3 class="law-title">Jurisdiction</h3>
+            <p class="law-desc">These terms are governed by Indian law</p>
+          </div>
+        </div>
+        <p class="mt-3">Any disputes shall be subject to the exclusive jurisdiction of the courts in India.</p>
+      </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="policy-section">
+      <div class="section-header">
+        <span class="section-number">9</span>
+        <h2 class="section-title">Contact Information</h2>
+      </div>
+      <div class="section-content">
+        <div class="contact-card">
+          <svg style="height: 25px;" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <div>
+            <a href="https://merchant.razorpay.com/policy/QFxh1eEgbI3Fwk/contact_us" class="contact-detail">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acceptance Section -->
+  <div class="mt-12 bg-gray-50 rounded-lg p-6 border-t-2 border-indigo-200">
+    <h3 class="text-xl font-semibold text-gray-800 mb-3">Acceptance of Terms</h3>
+    <p class="text-gray-600 mb-4">By using our website, you acknowledge that you have read, understood, and agreed to these Terms & Conditions.</p>
+    
+  </div>
 </div>
